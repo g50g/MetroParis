@@ -1,11 +1,12 @@
 //CARTE
 	var map = L.map('map').setView([48.85, 2.34], 12);
-	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-		minZoom: 11,
-		maxZoom: 16,
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
 		attribution: '&copy; Contributeurs de <a href="https://www.openstreetmap.org/">OpenStreetMap</a>, ' +
 			'Style © <a href="https://www.mapbox.com/">Mapbox</a>',
-		id: 'mapbox.streets'
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1
 	}).addTo(map);
 //DERNIERE EVOLUTION
 	var contlogo = L.control({ position: "topright" });
